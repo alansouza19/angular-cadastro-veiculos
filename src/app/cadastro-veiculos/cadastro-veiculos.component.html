@@ -1,0 +1,40 @@
+<body>
+  <div class="container">       
+    <div class="form">
+      <h1>Cadastrar Veículo</h1>
+          <form [formGroup]="veiculoForm" (ngSubmit)="submit()">
+            <div class="form-content">
+              <label>Nome</label>
+              <input type="text" formControlName="nome" required />
+            </div>
+            <div class="form-content">
+                <label>Marca</label>
+                <input type="text" formControlName="marca" required />
+              </div>
+              <div class="form-content">
+                <label>Modelo</label>
+                <input type="text" formControlName="modelo" required />
+              </div>
+              
+              <div class="form-content">
+                <label>Valor</label>
+                <input type="text" formControlName="valor" required />
+              </div>
+
+              <div class="form-content">
+                <label>Quilometragem</label>
+                <input type="text" formControlName="quilometro" required />
+              </div>
+
+            <div class="form-content">
+              <label>Foto</label>
+              <input type="text" formControlName="foto" required />
+            </div>
+          <div class="botoes-button">
+            <button type="submit">{{veiculoForm.get('id')?.value ? 'Atualizar Veículo': 'Cadastrar Veículo'}}</button>
+            <button type="submit" routerLink="/home">Cancelar</button>
+          </div>
+          </form>
+    </div>
+  </div> 
+</body>
