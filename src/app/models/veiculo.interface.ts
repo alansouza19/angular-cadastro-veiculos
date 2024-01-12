@@ -1,9 +1,12 @@
 export interface IVeiculo{
-    foto:string;
-    id?:number;
+    id:number;
     marca:string;
     modelo:string;
     nome:string;
     quilometro:string;
     valor:string;
+    foto:string;
+}
+export interface ListaIVeiculos{
+    veiculos:IVeiculo[];
 }

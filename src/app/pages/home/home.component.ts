@@ -18,14 +18,14 @@ export class HomeComponent {
 
   ){}
   ngOnInit(): void {
-    this.loadVeiculos();
+    this.carregarVeiculos();
   }
 
 
-  loadVeiculos(): void {
+  carregarVeiculos(): void {
     this.veiculosService.buscarVeiculos().subscribe({
       next: lista => {
-        this.veiculos = lista;
+        this.veiculos = lista.veiculos;
       }
     });
   }
@@ -45,7 +45,7 @@ export class HomeComponent {
       next: () => {
         alert('Veículo excluído com sucesso!');
         console.log('Veículo excluído com sucesso!');
-        this.loadVeiculos();
+        this.carregarVeiculos();
       },
       error: error => {
         console.error('Erro ao excluir veículo:', error);

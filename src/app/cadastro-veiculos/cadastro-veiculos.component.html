@@ -12,18 +12,18 @@
                 <input type="text" formControlName="marca" required />
               </div>
               <div class="form-content">
-                <label>Modelo</label>
+                <label>Modelo/Ano</label>
                 <input type="text" formControlName="modelo" required />
               </div>
               
               <div class="form-content">
                 <label>Valor</label>
-                <input type="text" formControlName="valor" required />
+                <input type="text" mask="separator.2" thousandSeparator="." formControlName="valor" required />
               </div>
 
               <div class="form-content">
                 <label>Quilometragem</label>
-                <input type="text" formControlName="quilometro" required />
+                <input type="text" mask="separator.2" thousandSeparator="." formControlName="quilometro" required />
               </div>
 
             <div class="form-content">
