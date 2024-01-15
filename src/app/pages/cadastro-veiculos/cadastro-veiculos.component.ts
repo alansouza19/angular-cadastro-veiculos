@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { VeiculosService } from '../service/veiculosService.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
+import { VeiculosService } from '../../service/veiculosService.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IVeiculo } from '../models/veiculo.interface';
+import { IVeiculo } from '../../models/veiculo.interface';
 
 
 @Component({
@@ -15,12 +15,12 @@ export class CadastroVeiculosComponent {
 
   veiculoForm = new FormGroup({
     id: new FormControl(),
-    nome: new FormControl(''),
-    marca: new FormControl(''),
-    modelo: new FormControl(''),
-    foto: new FormControl(''),
-    valor: new FormControl(''),
-    quilometro: new FormControl('')
+    nome: new FormControl('', [Validators.minLength(1)]),
+    marca: new FormControl('', [Validators.minLength(3)]),
+    modelo: new FormControl('', [Validators.minLength(3)]),
+    foto: new FormControl('', [Validators.minLength(3)]),
+    valor: new FormControl('', [Validators.minLength(3)]),
+    quilometro: new FormControl('', [Validators.minLength(3)])
   });
 
   constructor(

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroVeiculosComponent } from './cadastro-veiculos/cadastro-veiculos.component';
+import { CadastroVeiculosComponent } from './pages/cadastro-veiculos/cadastro-veiculos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { LoginComponent } from './pages/login/login.component';
 
 registerLocaleData(ptBr);
 
@@ -23,7 +24,8 @@ registerLocaleData(ptBr);
   declarations: [
     AppComponent,
     CadastroVeiculosComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
