@@ -26,6 +26,8 @@ export class HomeComponent {
     this.veiculosService.buscarVeiculos().subscribe({
       next: lista => {
         this.veiculos = lista.veiculos;
+        this.veiculos = this.veiculos.sort((a, b) => (a.valor > b.valor) ? -1 : 1);
+
       }
     });
   }
